@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D playerRB;
     public float movementSpeed;
     public bool canMove;
+    public bool hasKey;
     void Start()
     {
         canMove = true;

@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;
         sentences.Clear();
 
-        foreach (var sentence in dialogue.sentences)
+        foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -45,9 +45,19 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        var sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
-        Debug.Log(sentence);
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    public IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 
     public void EndDialogue()
