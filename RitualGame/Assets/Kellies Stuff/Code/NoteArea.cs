@@ -21,24 +21,24 @@ public class NoteArea : MonoBehaviour
             canBePRessed = true;
         }
 
-        if (other.CompareTag("GOOD"))
+        if (other.CompareTag("Button"))
         {
             good = true;
             perfect = false;
             bad = false;
         }
-        if (other.CompareTag("Button"))
-        {
-            perfect = true;
-            good = false;
-            bad = false;
-        }
-        if (other.CompareTag("MISSED"))
-        {
-            bad = true;
-            perfect = false;
-            good = false;
-        }
+        // if (other.CompareTag("Button"))
+        // {
+        //     perfect = true;
+        //     good = false;
+        //     bad = false;
+        // }
+        // if (other.CompareTag("MISSED"))
+        // {
+        //     bad = true;
+        //     perfect = false;
+        //     good = false;
+        // }
     }
 
     private void Update()

@@ -9,7 +9,7 @@ public class LongNotes : MonoBehaviour
     public bool canBePRessed, hold;
     public KeyCode keyToPress;
 
-    public Animator anim;
+    // public Animator anim;
     public GameObject poo, you;
 
     public GameObject goodEffect, greatEffect, perfectEffect, missedEffect;
@@ -33,7 +33,7 @@ public class LongNotes : MonoBehaviour
         if (canBePRessed && Input.GetKey(keyToPress))
         {
             GameManager.instance.NormalHit();
-            anim.Play("shoop");
+            // anim.Play("shoop");
             Debug.Log("hold");
             Invoke("FinishNote", 1f);
         }
