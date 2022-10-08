@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText , scoresText;
     public TextMeshProUGUI multiplierText;
-
+    
     public GameObject resultsScreen;
     // public TextMeshProUGUI percentHitText, goodsText, greatsText, perfectsText, missesText, moneyText;
     public float totalHits, goodHits, greatHits, perfectHits, missedHits, percentHit;
