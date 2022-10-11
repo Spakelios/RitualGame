@@ -5,4 +5,5 @@ using UnityEngine;
 public class InfoStorage : ScriptableObject
 {
     public static int totalNotes = 0;
+    public static int BossPoint;
 }
