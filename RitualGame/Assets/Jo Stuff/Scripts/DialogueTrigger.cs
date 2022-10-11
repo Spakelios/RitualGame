@@ -36,7 +36,7 @@ public class DialogueTrigger : MonoBehaviour
                 TriggerDialogue();
             }
 
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 FindObjectOfType<DialogueManager>().DisplayNextLine();
             }

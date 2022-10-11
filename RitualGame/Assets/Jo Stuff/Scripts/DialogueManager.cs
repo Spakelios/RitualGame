@@ -12,11 +12,13 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public GameObject dialogueBox;
     private Movement movement;
+    private AudioManager audioManager;
     void Start()
     {
         sentences = new Queue<string>();
         dialogueBox.SetActive(false);
         movement = FindObjectOfType<Movement>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -55,10 +57,11 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            FindObjectOfType<AudioManager>().Play("TalkingTest");
+            audioManager.Play("TalkingTest");
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.05f);
         }
+        audioManager.Stop("TalkingTest");
     }
 
     public void EndDialogue()
