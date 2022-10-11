@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2410395584182563563}
   - component: {fileID: 3134356989434448106}
   - component: {fileID: -9089319613109552982}
+  - component: {fileID: -4516419272600332396}
   m_Layer: 0
   m_Name: good
   m_TagString: Untagged
@@ -97,4 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603c97ff7c14648469ee1418ffc8b39b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  youmom: {fileID: 9120010292893309484}
+  lifetime: 1
+--- !u!210 &-4516419272600332396
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120010292893309484}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 252
+  m_SortAtRoot: 0

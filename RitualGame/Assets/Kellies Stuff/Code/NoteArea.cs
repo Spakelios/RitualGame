@@ -27,18 +27,18 @@ public class NoteArea : MonoBehaviour
             perfect = false;
             bad = false;
         }
-        // if (other.CompareTag("Button"))
-        // {
-        //     perfect = true;
-        //     good = false;
-        //     bad = false;
-        // }
-        // if (other.CompareTag("MISSED"))
-        // {
-        //     bad = true;
-        //     perfect = false;
-        //     good = false;
-        // }
+        if (other.CompareTag("Button"))
+        {
+            perfect = true;
+            good = false;
+            bad = false;
+        }
+        if (other.CompareTag("MISSED"))
+        {
+            bad = true;
+            perfect = false;
+            good = false;
+         }
     }
 
     private void Update()
@@ -56,7 +56,7 @@ public class NoteArea : MonoBehaviour
                     GameManager.instance.NormalHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
-                if (perfect && !good)
+                if (perfect && !good && !bad)
                 {
                     Debug.Log("perfect!");
                     GameManager.instance.PerfectHit();

@@ -133,5 +133,6 @@ public class GameManager : MonoBehaviour
                     currentMultiplier = 1;
                     multiplierText.text = "Multiplier: " + currentMultiplier;
                 }
+         
 
 }
