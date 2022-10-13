@@ -7,6 +7,14 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool inDialogueRange;
+    public AudioSource voiceLine;
+    private DialogueManager dialogueManager;
+
+    private void Start()
+    {
+        voiceLine = GetComponent<AudioSource>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
+    }
 
     public void OnTriggerStay2D(Collider2D other)
     {
@@ -23,6 +31,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        dialogueManager.talking = voiceLine;
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 

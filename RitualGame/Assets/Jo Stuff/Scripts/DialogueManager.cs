@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     private Movement movement;
     private AudioManager audioManager;
+    public AudioSource talking;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -57,11 +59,12 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            audioManager.Play("TalkingTest");
+            talking.Play();
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.08f);
         }
-        audioManager.Stop("TalkingTest");
+
+        talking.Stop();
     }
 
     public void EndDialogue()
