@@ -3294,6 +3294,8 @@ MonoBehaviour:
   scoresText: {fileID: 694853363}
   multiplierText: {fileID: 61477262}
   resultsScreen: {fileID: 1728950127}
+  lol: {fileID: 1576241986}
+  ui: {fileID: 461447779}
   percentHitText: {fileID: 1871569773}
   goodsText: {fileID: 326361573}
   perfectsText: {fileID: 1520700814}
@@ -3427,7 +3429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a799f1d179c13f949bcc04c28b55f58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 0}
 --- !u!1 &830869425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6341,7 +6342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1728950128
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7835,9 +7836,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 490669680}
   - {fileID: 461447780}
   - {fileID: 1576241987}
+  - {fileID: 490669680}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8376,6 +8377,8 @@ MonoBehaviour:
   scoresText: {fileID: 0}
   multiplierText: {fileID: 0}
   resultsScreen: {fileID: 0}
+  lol: {fileID: 0}
+  ui: {fileID: 0}
   percentHitText: {fileID: 0}
   goodsText: {fileID: 0}
   perfectsText: {fileID: 0}

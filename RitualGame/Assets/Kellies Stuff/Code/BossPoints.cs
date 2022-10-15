@@ -41,7 +41,7 @@ public class BossPoints : MonoBehaviour
         if (good && !bad && !perfect)
         {
             Debug.Log("hit");
-            InfoStorage.BossPoint++;
+         
             Destroy(gameObject);
             Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
         }
@@ -49,14 +49,13 @@ public class BossPoints : MonoBehaviour
         {
             Debug.Log("perfect!");
             Destroy(gameObject);
-            InfoStorage.BossPoint++;
+       
             Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
         }
         if (bad && !good && !perfect)
         {
             Debug.Log("bad");
             
-            InfoStorage.BossPoint++;
             Destroy(gameObject);
             Instantiate(missedEffect, transform.position, missedEffect.transform.rotation);
                

@@ -14,7 +14,6 @@ public class LongBoss : MonoBehaviour
     {
         if (other.CompareTag("GOOD"))
         {
-            InfoStorage.BossPoint++;
             anim.Play("Vanish");
             Debug.Log("hold");
             Invoke("FinishNote", 1f);
@@ -23,7 +22,6 @@ public class LongBoss : MonoBehaviour
         else if (other.CompareTag("MISSED"))
         {
             Debug.Log("miss!");
-            InfoStorage.BossPoint--;
             Instantiate(missedEffect, transform.position, perfectEffect.transform.rotation);
             Destroy(poo);
             Destroy(you);

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText , scoresText;
     public TextMeshProUGUI multiplierText;
     
-    public GameObject resultsScreen;
+    public GameObject resultsScreen, lol, ui;
     public TextMeshProUGUI percentHitText, goodsText, perfectsText, missesText;
     public float totalHits, goodHits, greatHits, perfectHits, missedHits, percentHit;
 
@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
             }
             else if (!theMusic.isPlaying)
             {
+                lol.SetActive(false);
+                ui.SetActive(false);
                 resultsScreen.SetActive(true);
                 scoresText.text = "SCORE: " + currentScore; 
                 perfectsText.text = perfectHits + " PERFECTS";

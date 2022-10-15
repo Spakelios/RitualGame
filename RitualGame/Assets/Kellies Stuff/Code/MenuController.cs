@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public GameObject Sprite, Sprite3, Sprite2, box;
-    public Button demon1, demon2, demon3;
+    public Button demon1, demon2, demon3, demon4;
     public Image sprites;
 
     public void Update()
@@ -26,38 +26,38 @@ public class MenuController : MonoBehaviour
         {
             demon3.interactable = true;
         }
+
+        if (InfoStorage.amon >= 1)
+        {
+            demon4.interactable = true;
+        }
     }
 
     public void Swap()
     {
-        if (InfoStorage.DemonUnlock1 >= 1)
-        {
+        
             Sprite.SetActive(true);
             Sprite2.SetActive(false);
             Sprite3.SetActive(false);
             box.SetActive(false);
-        }
     }
 
     public void Swap2()
     {
-        if (InfoStorage.DemonUnlock2 >= 1 )
-        {
-            Sprite.SetActive(false);
+        Sprite.SetActive(false);
             Sprite2.SetActive(true);
             Sprite3.SetActive(false);
             box.SetActive(false);
-        }
+        
     } 
     public void Swap3()
     {
-        if (InfoStorage.DemonUnlock3 >= 1 )
-        {
+      
             Sprite.SetActive(false);
             Sprite2.SetActive(false);
             Sprite3.SetActive(true);
             box.SetActive(false);
-        }
+        
     }
 
     public void Meow()

@@ -1874,7 +1874,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 621044687}
   - {fileID: 1728950128}
   - {fileID: 112786916}
   m_Father: {fileID: 1958108885}
@@ -2385,13 +2384,13 @@ RectTransform:
   - {fileID: 1472386035}
   - {fileID: 1731814929}
   - {fileID: 61477261}
-  m_Father: {fileID: 490669680}
+  m_Father: {fileID: 1576241987}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.3761597}
-  m_SizeDelta: {x: 800, y: 364.75232}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 400, y: 184.07079}
+  m_SizeDelta: {x: 800, y: 368.14157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &628652849
 GameObject:
@@ -3294,6 +3293,8 @@ MonoBehaviour:
   scoresText: {fileID: 694853363}
   multiplierText: {fileID: 61477262}
   resultsScreen: {fileID: 1728950127}
+  lol: {fileID: 1576241986}
+  ui: {fileID: 621044683}
   percentHitText: {fileID: 1871569773}
   goodsText: {fileID: 326361573}
   perfectsText: {fileID: 1520700814}
@@ -5844,6 +5845,7 @@ RectTransform:
   - {fileID: 1980687821}
   - {fileID: 1238776445}
   - {fileID: 317654991}
+  - {fileID: 621044687}
   m_Father: {fileID: 1958108885}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7944,8 +7946,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1576241987}
-  - {fileID: 490669680}
   - {fileID: 461447780}
+  - {fileID: 490669680}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8479,6 +8481,8 @@ MonoBehaviour:
   scoresText: {fileID: 0}
   multiplierText: {fileID: 0}
   resultsScreen: {fileID: 0}
+  lol: {fileID: 0}
+  ui: {fileID: 0}
   percentHitText: {fileID: 0}
   goodsText: {fileID: 0}
   perfectsText: {fileID: 0}
