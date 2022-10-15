@@ -32,7 +32,7 @@ public class LongNotes : MonoBehaviour
     {
         if (canBePRessed && Input.GetKey(keyToPress))
         {
-            GameManager.instance.NormalHit();
+            GameManager.instance.LongHit();
             anim.Play("Vanish");
             Debug.Log("hold");
             Invoke("FinishNote", 1f);

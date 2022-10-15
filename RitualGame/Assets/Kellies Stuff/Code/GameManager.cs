@@ -18,10 +18,10 @@ public class GameManager : MonoBehaviour
     public BeatScroller theBS;
 
     public int currentScore;
-    public int ScorePerNote = 100;
+    public int ScorePerNote = 10;
 
-    public int ScorePerGoodNote = 125;
-    public int ScorePerPerfectNote = 150;
+    public int ScorePerGoodNote = 15;
+    public int ScorePerPerfectNote = 15;
 
     public int currentMultiplier;
     public int multiplierTracker;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI multiplierText;
     
     public GameObject resultsScreen;
-    // public TextMeshProUGUI percentHitText, goodsText, greatsText, perfectsText, missesText, moneyText;
+    public TextMeshProUGUI percentHitText, goodsText, perfectsText, missesText;
     public float totalHits, goodHits, greatHits, perfectHits, missedHits, percentHit;
 
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         theMusic.Play();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (!startPLaying)
         {
@@ -57,18 +57,17 @@ public class GameManager : MonoBehaviour
             else if (!theMusic.isPlaying)
             {
                 resultsScreen.SetActive(true);
-                scoresText.text ="Your Score" + currentScore;
-                // goodsText.text  = " " + goodHits;
-                // greatsText.text = " " + greatHits;
-                // perfectsText.text = " " + perfectHits;
-                // missesText.text = " " + missedHits;
-                // moneyText.text = " " + InfoStorage.totalNotes;
+                scoresText.text = "SCORE: " + currentScore; 
+                perfectsText.text = perfectHits + " PERFECTS";
+                missesText.text = missedHits + " MISSED";
+                goodsText.text = goodHits + " GREATS";
+                 // moneyText.text = " " + InfoStorage.totalNotes;
 
-                // float totalHit = goodHits + greatHits + perfectHits;
-                // float percentHit = (totalHit / totalHits) * 100f;
+                float totalHit = goodHits + perfectHits;
+                float percentHit = (totalHit / InfoStorage.totalNotes) * 100;
 
                 
-                // percentHitText.text = percentHit.ToString("F1");
+                percentHitText.text = percentHit.ToString("f1");
                 {
                     Debug.Log("oops");
                 }
@@ -129,9 +128,19 @@ public class GameManager : MonoBehaviour
                 {
                     Debug.Log("Missed");
 
+                    InfoStorage.totalNotes--;
                     missedHits++;
                     currentMultiplier = 1;
                     multiplierText.text = "Multiplier: " + currentMultiplier;
+                }
+                
+                public void LongHit()
+                {
+                    currentScore += ScorePerNote;
+
+                    NoteHit();
+                    InfoStorage.totalNotes++;
+                    goodHits += 5; 
                 }
          
 
