@@ -31,6 +31,7 @@ public class MenuController : MonoBehaviour
         {
             demon4.interactable = true;
         }
+
         if (InfoStorage.bast >= 1)
         {
             demon5.interactable = true;

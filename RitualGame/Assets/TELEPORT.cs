@@ -12,6 +12,7 @@ public class TELEPORT : MonoBehaviour
     {
         InfoStorage.amon++;
         InfoStorage.bast++;
+        InfoStorage.neph++;
        SceneManager.LoadScene("menusss");
     }
 }
