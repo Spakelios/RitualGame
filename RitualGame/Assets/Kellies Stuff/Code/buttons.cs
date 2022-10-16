@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,5 +37,20 @@ public class buttons : MonoBehaviour
    {
       InfoStorage.DemonUnlock3++;
       SceneManager.LoadScene("menusss");
+   }
+
+   public void neph()
+   {
+      SceneManager.LoadScene("Rythmic game");
+   }
+   public void menu()
+   {
+      SceneManager.LoadScene("menusss");
+   }
+
+   public void OnApplicationQuit()
+   {
+      Application.Quit();
+      Debug.Log("You Mom");
    }
 }
