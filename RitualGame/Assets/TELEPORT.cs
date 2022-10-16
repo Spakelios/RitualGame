@@ -11,6 +11,7 @@ public class TELEPORT : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         InfoStorage.amon++;
+        InfoStorage.bast++;
        SceneManager.LoadScene("menusss");
     }
 }

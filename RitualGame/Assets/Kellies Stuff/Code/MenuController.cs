@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     public GameObject Sprite, Sprite3, Sprite2, box;
-    public Button demon1, demon2, demon3, demon4;
+    public Button demon1, demon2, demon3, demon4, demon5;
     public Image sprites;
 
     public void Update()
@@ -30,6 +30,10 @@ public class MenuController : MonoBehaviour
         if (InfoStorage.amon >= 1)
         {
             demon4.interactable = true;
+        }
+        if (InfoStorage.bast >= 1)
+        {
+            demon5.interactable = true;
         }
     }
 
